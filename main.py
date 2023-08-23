@@ -67,6 +67,7 @@ if task_name == task_list[0]:
 
 else:
     st.title("Image emotion Recognition App")
+    st.markdown("Made by Animesh |[ website](https://animesh11portfolio.streamlit.app/)| [ LinkedIn](https://www.linkedin.com/in/animesh-singh11)")
 
 
     def display_image_with_text(image):
