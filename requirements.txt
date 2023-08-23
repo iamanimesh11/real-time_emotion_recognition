@@ -1,6 +1,6 @@
 streamlit
 streamlit-webrtc
 av
-opencv-python-headless
+python3-opencv
 deepface
 libgl1-mesa-glx
