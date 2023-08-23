@@ -6,6 +6,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
+import time
 task_list = ["Real time Emotions Detection app","Image emotion detection App"]
 
 with st.sidebar:
