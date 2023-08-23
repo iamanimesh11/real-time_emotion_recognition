@@ -99,7 +99,7 @@ else:
 
         with st.spinner("Detecting emotion..."):
             pred = DeepFace.analyze(image_cv2)
-            time.sleep(60)             
+            time.sleep(10)             
 
             emotion_text = pred[0]['dominant_emotion']  # Replace with the actual emotion text
 
