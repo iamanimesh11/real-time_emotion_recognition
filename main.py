@@ -1,3 +1,4 @@
+import time
 from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 import cv2
@@ -6,31 +7,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
-import time
-import requests
-import os
-
-age_weights_url = "https://github.com/iamanimesh11/real-time_emotion_recognition/releases/download/face/age_model_weights.h5"
-gender_weights_url = "https://github.com/iamanimesh11/real-time_emotion_recognition/releases/download/face/gender_model_weights.h5"
-race_weights_url = "https://github.com/iamanimesh11/real-time_emotion_recognition/releases/download/face/race_model_single_batch.h5"
-
-# Function to download model weights
-def download_weights(url, save_path):
-    response = requests.get(url)
-    with open(save_path, "wb") as f:
-        f.write(response.content)
-
-# Check if weights are already downloaded
-age_weights_path = "age_model_weights.h5"
-gender_weights_path = "gender_model_weights.h5"
-race_weights_path = "race_model_weights.h5"
-
-if not all(os.path.exists(path) for path in [age_weights_path, gender_weights_path, race_weights_path]):
-    st.write("Downloading model weights...")
-    download_weights(age_weights_url, age_weights_path)
-    download_weights(gender_weights_url, gender_weights_path)
-    download_weights(race_weights_url, race_weights_path)
-    st.write("Model weights downloaded!")
 task_list = ["Real time Emotions Detection app","Image emotion detection App"]
 
 with st.sidebar:
@@ -123,8 +99,7 @@ else:
 
         with st.spinner("Detecting emotion..."):
             pred = DeepFace.analyze(image_cv2)
-            time.sleep(10)             
-
+            time.sleep(30)
             emotion_text = pred[0]['dominant_emotion']  # Replace with the actual emotion text
 
         # Display the uploaded image with emotion text below it
