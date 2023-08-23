@@ -1,4 +1,3 @@
-libgl
 opencv-python-headless
 deepface
 av
