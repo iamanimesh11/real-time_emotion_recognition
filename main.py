@@ -1,4 +1,5 @@
 import time
+
 from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 import cv2
@@ -60,6 +61,9 @@ if task_name == task_list[0]:
             # Remove the AudioProcessor
             video_transformer_factory=None,
         )
+        if(st.button("Didn't worked ? here's a sample video")):
+            st.video("https://www.youtube.com/embed/6We1RJlvoW9c")
+
 else:
     st.title("Image emotion detection App")
 
@@ -94,14 +98,16 @@ else:
     uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
     if uploaded_image is not None:
-        image = Image.open(uploaded_image)
-        image_cv2 = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-
-        with st.spinner("Detecting emotion..."):
-            pred = DeepFace.analyze(image_cv2)
-            time.sleep(30)
-            emotion_text = pred[0]['dominant_emotion']  # Replace with the actual emotion text
-
-        # Display the uploaded image with emotion text below it
-        st.header(f"Emotion: {emotion_text}")
-        st.image(display_image_with_text(image_cv2), use_column_width=True)
+        st.success("App is Under maintenance,watch sample video Here!")
+        st.video("https://www.youtube.com/embed/6We1RJlvoW9c")
+        # image = Image.open(uploaded_image)
+        # image_cv2 = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+        #
+        # with st.spinner("Detecting emotion..."):
+        #     pred = DeepFace.analyze(image_cv2)
+        #     time.sleep(30)
+        #     emotion_text = pred[0]['dominant_emotion']  # Replace with the actual emotion text
+        #
+        # # Display the uploaded image with emotion text below it
+        # st.header(f"Emotion: {emotion_text}")
+        # st.image(display_image_with_text(image_cv2), use_column_width=True)
