@@ -98,9 +98,8 @@ else:
         image_cv2 = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
 
         with st.spinner("Detecting emotion..."):
-            time.sleep(60)
             pred = DeepFace.analyze(image_cv2)
-                        
+            time.sleep(60)             
 
             emotion_text = pred[0]['dominant_emotion']  # Replace with the actual emotion text
 
