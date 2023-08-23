@@ -15,7 +15,6 @@ with st.sidebar:
     task_name = st.selectbox("Select your tasks:", task_list)
 
 if task_name == task_list[0]:
-        st.markdown("Made by Animesh |[ website](https://animesh11portfolio.streamlit.app/)| [ LinkedIn](https://www.linkedin.com/in/animesh-singh11)")
     
 
         class EmotionVideoProcessor:
@@ -54,6 +53,7 @@ if task_name == task_list[0]:
             {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
         )
         st.title("Real time Emotions Recognition App")
+        st.markdown("Made by Animesh |[ website](https://animesh11portfolio.streamlit.app/)| [ LinkedIn](https://www.linkedin.com/in/animesh-singh11)")
 
         webrtc_streamer(
             key="emotion-Recognition",
