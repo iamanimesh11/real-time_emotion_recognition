@@ -4,4 +4,3 @@ av
 opencv-python-headless
 deepface
 libgl1-mesa-glx
-pip install -r requirements.txt
