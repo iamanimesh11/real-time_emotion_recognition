@@ -1,6 +1,5 @@
 from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
-import cv2
 from deepface import DeepFace
 import streamlit as st
 import matplotlib.pyplot as plt
