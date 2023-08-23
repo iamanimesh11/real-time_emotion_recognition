@@ -1,5 +1,8 @@
 streamlit
-streamlit-webrtc
-av
-python3-opencv
+opencv-python-headless
 deepface
+av
+matplotlib
+Pillow
+numpy
+streamlit-webrtc
