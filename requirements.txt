@@ -3,4 +3,3 @@ streamlit-webrtc
 av
 python3-opencv
 deepface
-libgl1-mesa-glx
