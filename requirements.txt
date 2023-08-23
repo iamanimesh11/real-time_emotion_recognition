@@ -1,4 +1,4 @@
-streamlit
+libgl
 opencv-python-headless
 deepface
 av
