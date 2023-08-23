@@ -8,14 +8,15 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
-task_list = ["Real time Emotions Detection app","Image emotion detection App"]
+task_list = ["Real time Emotions Recognition app","Image emotion Recognition App"]
 
 with st.sidebar:
     st.title('Task Selection')
     task_name = st.selectbox("Select your tasks:", task_list)
 
 if task_name == task_list[0]:
-
+        st.markdown("Made by Animesh |[ website](https://animesh11portfolio.streamlit.app/)| [ LinkedIn](https://www.linkedin.com/in/animesh-singh11)")
+    
 
         class EmotionVideoProcessor:
             def __init__(self):
@@ -52,10 +53,10 @@ if task_name == task_list[0]:
         rtc_configuration = RTCConfiguration(
             {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
         )
-        st.title("Real time Emotions Detection App")
+        st.title("Real time Emotions Recognition App")
 
         webrtc_streamer(
-            key="emotion-detection",
+            key="emotion-Recognition",
             video_processor_factory=EmotionVideoProcessor,
             rtc_configuration=rtc_configuration,
             # Remove the AudioProcessor
@@ -65,7 +66,7 @@ if task_name == task_list[0]:
             st.video("https://www.youtube.com/embed/6We1RJlvoW9c")
 
 else:
-    st.title("Image emotion detection App")
+    st.title("Image emotion Recognition App")
 
 
     def display_image_with_text(image):
